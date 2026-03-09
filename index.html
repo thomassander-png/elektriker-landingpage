@@ -89,6 +89,49 @@
   <p>Elektriker werden deutschlandweit gesucht. Besonders in Bereichen wie Gebäudetechnik, Industrieanlagen und Energietechnik gibt es viele offene Stellen. Viele Unternehmen suchen dringend qualifizierte Fachkräfte.</p>
   <p>Durch unsere Schnellbewerbung kannst du dich in weniger als 60 Sekunden bei passenden Arbeitgebern melden.</p>
 </div>
+User-agent: *
+Allow: /
+
+Sitemap: https://elektriker-landingpage.vercel.app/sitemap.xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://elektriker-landingpage.vercel.app/</loc></url>
+  <url><loc>https://elektriker-landingpage.vercel.app/stadt.html?city=berlin</loc></url>
+  <url><loc>https://elektriker-landingpage.vercel.app/stadt.html?city=hamburg</loc></url>
+  <url><loc>https://elektriker-landingpage.vercel.app/stadt.html?city=muenchen</loc></url>
+  <url><loc>https://elektriker-landingpage.vercel.app/stadt.html?city=koeln</loc></url>
+  <url><loc>https://elektriker-landingpage.vercel.app/stadt.html?city=frankfurt</loc></url>
+</urlset>
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elektriker Jobs</title>
+  <meta name="robots" content="index,follow">
+  <style>
+    body{font-family:Arial,sans-serif;max-width:900px;margin:auto;padding:40px;color:#111}
+    .button{background:#2b7cff;color:#fff;padding:14px 24px;border-radius:8px;text-decoration:none;font-weight:bold;display:inline-block}
+  </style>
+</head>
+<body>
+  <h1 id="title"></h1>
+  <p id="text"></p>
+  <p>Elektriker werden aktuell deutschlandweit gesucht. Über unsere Schnellbewerbung kannst du dich in weniger als 60 Sekunden bei passenden Arbeitgebern melden.</p>
+  <a class="button" href="/#bewerbung">Jetzt bewerben</a>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const city = params.get("city") || "deutschland";
+    const name = city.charAt(0).toUpperCase() + city.slice(1);
+    document.getElementById("title").innerText = "Elektriker Jobs in " + name;
+    document.getElementById("text").innerText = "Viele Elektrobetriebe suchen aktuell Elektriker in " + name + ".";
+    document.title = "Elektriker Jobs in " + name;
+  </script>
+</body>
+</html>
 
 <footer>Elektriker Jobs Deutschland</footer>
 </body>
